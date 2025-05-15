@@ -2,8 +2,8 @@ name: Actualizar CSV desde World Bank
 
 on:
   schedule:
-    - cron: '0 8 * * 1'  # cada lunes a las 08:00 UTC
-  workflow_dispatch:
+    - cron: '0 8 * * 1'         # Ejecuta cada lunes a las 08:00 UTC
+  workflow_dispatch:            # Permite ejecución manual desde la pestaña Actions
 
 jobs:
   actualizar-csv:
