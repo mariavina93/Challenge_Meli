@@ -29,5 +29,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add data/indicadores_argentina.csv
-          git commit -m "Actualización automática del CSV" || echo "Nada que commitear"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+          git commit -m "Actualización automática del CSV" || echo "Sin cambios"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main      
