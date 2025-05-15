@@ -35,7 +35,7 @@ Challenge_Meli/
 ├── scripts/
 │   └── update_data.py                         ← Script Python que descarga y limpia los datos
 └── README.md                                  ← Este archivo
-
+```
 ---
 
 ## 🧠 Arquitectura utilizada
