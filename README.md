@@ -24,7 +24,6 @@ Challenge_Meli/
 ├── arquitectura/
 │   └── arquitectura.drawio                    ← (arquitectura editable editable)
 │   └── arquitectura.png                       ← (Imagen de arquitectura)
-
 ├── dashboard/
 │   └── Dashboard - Indicadores Argentina.twb  ← Tablero final
 ├── images/
