@@ -12,7 +12,7 @@ indicators = {
     "NY.GDP.PCAP.CD": "gdp_per_capita"
 }
 
-base_url = "http://api.worldbank.org/v2/country/AR/indicator/{code}?format=json&date=2000:2023&per_page=1000"
+base_url = "http://api.worldbank.org/v2/country/AR/indicator/{code}?format=json&date=2000:2025&per_page=1000"
 
 dataframes = []
 

@@ -1,0 +1,598 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0313.2002                               -->
+<workbook original-version='18.1' source-build='2025.1.0 (20251.25.0313.2002)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='indicadores_argentina' inline='true' name='federated.181gnnh0mb4l47167rqxc1d0pihm' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='indicadores_argentina' name='textscan.03xixyr0u6pq1z11fqfkx0ej0aun'>
+            <connection class='textscan' directory='C:/Users/Usuario/Downloads' filename='indicadores_argentina.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.03xixyr0u6pq1z11fqfkx0ej0aun' name='indicadores_argentina.csv' table='[indicadores_argentina#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='es_MX' separator=','>
+            <column datatype='integer' name='year' ordinal='0' />
+            <column datatype='real' name='internet_users_pct' ordinal='1' />
+            <column datatype='real' name='mobile_subs_per_100' ordinal='2' />
+            <column datatype='real' name='gdp_per_capita' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[indicadores_argentina.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_MX&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[indicadores_argentina.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[indicadores_argentina.csv_B3175EB0D7DF4888B3084AD8B9913E1A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>internet_users_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[internet_users_pct]</local-name>
+            <parent-name>[indicadores_argentina.csv]</parent-name>
+            <remote-alias>internet_users_pct</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[indicadores_argentina.csv_B3175EB0D7DF4888B3084AD8B9913E1A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mobile_subs_per_100</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mobile_subs_per_100]</local-name>
+            <parent-name>[indicadores_argentina.csv]</parent-name>
+            <remote-alias>mobile_subs_per_100</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[indicadores_argentina.csv_B3175EB0D7DF4888B3084AD8B9913E1A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gdp_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gdp_per_capita]</local-name>
+            <parent-name>[indicadores_argentina.csv]</parent-name>
+            <remote-alias>gdp_per_capita</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[indicadores_argentina.csv_B3175EB0D7DF4888B3084AD8B9913E1A]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Internet Users Growth' datatype='real' name='[Calculation_954481656034725888]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([internet_users_pct]) - LOOKUP(SUM([internet_users_pct]), -1)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column aggregation='None' datatype='integer' name='[Internet Users Pct (agrupación)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[internet_users_pct]' peg='0' size='8.81' />
+      </column>
+      <column caption='indicadores_argentina.csv' datatype='table' name='[__tableau_internal_object_id__].[indicadores_argentina.csv_B3175EB0D7DF4888B3084AD8B9913E1A]' role='measure' type='quantitative' />
+      <column caption='Gdp Per Capita' datatype='real' name='[gdp_per_capita]' role='measure' type='quantitative' />
+      <column caption='Internet Users Pct' datatype='real' name='[internet_users_pct]' role='measure' type='quantitative' />
+      <column caption='Mobile Subs Per 100' datatype='real' name='[mobile_subs_per_100]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column-instance column='[internet_users_pct]' derivation='Sum' name='[sum:internet_users_pct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[mobile_subs_per_100]' derivation='Sum' name='[sum:mobile_subs_per_100:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_954481656034725888]' derivation='User' name='[usr:Calculation_954481656034725888:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' />
+      </column-instance>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='es_ES' class='hyper' dbname='C:/Users/Usuario/AppData/Local/Temp/TableauTemp/#TableauTemp_0vgotl30codby719dmnhq15s4uq4.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/15/2025 03:26:29 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>year</remote-alias>
+              <ordinal>0</ordinal>
+              <family>indicadores_argentina.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[indicadores_argentina.csv_B3175EB0D7DF4888B3084AD8B9913E1A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>internet_users_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[internet_users_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>internet_users_pct</remote-alias>
+              <ordinal>1</ordinal>
+              <family>indicadores_argentina.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[indicadores_argentina.csv_B3175EB0D7DF4888B3084AD8B9913E1A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mobile_subs_per_100</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[mobile_subs_per_100]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mobile_subs_per_100</remote-alias>
+              <ordinal>2</ordinal>
+              <family>indicadores_argentina.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[indicadores_argentina.csv_B3175EB0D7DF4888B3084AD8B9913E1A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gdp_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gdp_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gdp_per_capita</remote-alias>
+              <ordinal>3</ordinal>
+              <family>indicadores_argentina.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[indicadores_argentina.csv_B3175EB0D7DF4888B3084AD8B9913E1A]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.181gnnh0mb4l47167rqxc1d0pihm].[sum:internet_users_pct:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.181gnnh0mb4l47167rqxc1d0pihm].[usr:Calculation_954481656034725888:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.181gnnh0mb4l47167rqxc1d0pihm]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.181gnnh0mb4l47167rqxc1d0pihm].[sum:mobile_subs_per_100:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Estados Unidos Mexicanos&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='indicadores_argentina.csv' id='indicadores_argentina.csv_B3175EB0D7DF4888B3084AD8B9913E1A'>
+            <properties context=''>
+              <relation connection='textscan.03xixyr0u6pq1z11fqfkx0ej0aun' name='indicadores_argentina.csv' table='[indicadores_argentina#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='es_MX' separator=','>
+                  <column datatype='integer' name='year' ordinal='0' />
+                  <column datatype='real' name='internet_users_pct' ordinal='1' />
+                  <column datatype='real' name='mobile_subs_per_100' ordinal='2' />
+                  <column datatype='real' name='gdp_per_capita' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Comparativo de indicadores'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#f28e2b' fontname='Times New Roman' fontsize='20'>Comparativo de indicadores</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='indicadores_argentina' name='federated.181gnnh0mb4l47167rqxc1d0pihm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.181gnnh0mb4l47167rqxc1d0pihm'>
+            <column caption='Internet Users Pct' datatype='real' name='[internet_users_pct]' role='measure' type='quantitative' />
+            <column caption='Mobile Subs Per 100' datatype='real' name='[mobile_subs_per_100]' role='measure' type='quantitative' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[internet_users_pct]' derivation='Sum' name='[sum:internet_users_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[mobile_subs_per_100]' derivation='Sum' name='[sum:mobile_subs_per_100:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.181gnnh0mb4l47167rqxc1d0pihm].[sum:mobile_subs_per_100:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.181gnnh0mb4l47167rqxc1d0pihm].[sum:mobile_subs_per_100:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.181gnnh0mb4l47167rqxc1d0pihm].[sum:mobile_subs_per_100:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.181gnnh0mb4l47167rqxc1d0pihm].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.181gnnh0mb4l47167rqxc1d0pihm].[sum:internet_users_pct:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.181gnnh0mb4l47167rqxc1d0pihm].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.181gnnh0mb4l47167rqxc1d0pihm].[sum:mobile_subs_per_100:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.181gnnh0mb4l47167rqxc1d0pihm].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.181gnnh0mb4l47167rqxc1d0pihm].[sum:internet_users_pct:qk] + [federated.181gnnh0mb4l47167rqxc1d0pihm].[sum:mobile_subs_per_100:qk])</rows>
+        <cols>[federated.181gnnh0mb4l47167rqxc1d0pihm].[none:year:qk]</cols>
+      </table>
+      <simple-id uuid='{39B49310-7217-4840-BFBD-C0B54E959B8E}' />
+    </worksheet>
+    <worksheet name='Evolución de usuarios de internet'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#f28e2b' fontname='Times New Roman' fontsize='20'>Evolución de usuarios de internet</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='indicadores_argentina' name='federated.181gnnh0mb4l47167rqxc1d0pihm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.181gnnh0mb4l47167rqxc1d0pihm'>
+            <column caption='Internet Users Pct' datatype='real' name='[internet_users_pct]' role='measure' type='quantitative' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[internet_users_pct]' derivation='Sum' name='[sum:internet_users_pct:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f28e2b' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.181gnnh0mb4l47167rqxc1d0pihm].[sum:internet_users_pct:qk]</rows>
+        <cols>[federated.181gnnh0mb4l47167rqxc1d0pihm].[none:year:qk]</cols>
+      </table>
+      <simple-id uuid='{46CE71E5-E4A0-4A12-A043-997BCF6BAAC3}' />
+    </worksheet>
+    <worksheet name='KPI - Internet'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='indicadores_argentina' name='federated.181gnnh0mb4l47167rqxc1d0pihm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.181gnnh0mb4l47167rqxc1d0pihm'>
+            <column caption='Gdp Per Capita' datatype='real' name='[gdp_per_capita]' role='measure' type='quantitative' />
+            <column caption='Internet Users Pct' datatype='real' name='[internet_users_pct]' role='measure' type='quantitative' />
+            <column caption='Mobile Subs Per 100' datatype='real' name='[mobile_subs_per_100]' role='measure' type='quantitative' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gdp_per_capita]' derivation='Sum' name='[sum:gdp_per_capita:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[internet_users_pct]' derivation='Sum' name='[sum:internet_users_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[mobile_subs_per_100]' derivation='Sum' name='[sum:mobile_subs_per_100:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.181gnnh0mb4l47167rqxc1d0pihm].[none:year:qk]' included-values='in-range'>
+            <max>2023</max>
+          </filter>
+          <slices>
+            <column>[federated.181gnnh0mb4l47167rqxc1d0pihm].[none:year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='162' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.181gnnh0mb4l47167rqxc1d0pihm].[sum:internet_users_pct:qk]' />
+              <text column='[federated.181gnnh0mb4l47167rqxc1d0pihm].[sum:mobile_subs_per_100:qk]' />
+              <text column='[federated.181gnnh0mb4l47167rqxc1d0pihm].[sum:gdp_per_capita:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{8EDAE84F-8CA4-4B65-A3A1-FE5EDDD4FE5A}' />
+    </worksheet>
+    <worksheet name='crecimiento interanual'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#f28e2b' fontname='Times New Roman' fontsize='20'>Crecimiento interanual</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='indicadores_argentina' name='federated.181gnnh0mb4l47167rqxc1d0pihm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.181gnnh0mb4l47167rqxc1d0pihm'>
+            <column caption='Internet Users Growth' datatype='real' name='[Calculation_954481656034725888]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([internet_users_pct]) - LOOKUP(SUM([internet_users_pct]), -1)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Internet Users Pct' datatype='real' name='[internet_users_pct]' role='measure' type='quantitative' />
+            <column caption='Mobile Subs Per 100' datatype='real' name='[mobile_subs_per_100]' role='measure' type='quantitative' />
+            <column-instance column='[year]' derivation='None' name='[none:year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[mobile_subs_per_100]' derivation='Sum' name='[sum:mobile_subs_per_100:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_954481656034725888]' derivation='User' name='[usr:Calculation_954481656034725888:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.181gnnh0mb4l47167rqxc1d0pihm].[sum:mobile_subs_per_100:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.181gnnh0mb4l47167rqxc1d0pihm].[sum:mobile_subs_per_100:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.181gnnh0mb4l47167rqxc1d0pihm].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.181gnnh0mb4l47167rqxc1d0pihm].[usr:Calculation_954481656034725888:qk]</rows>
+        <cols>[federated.181gnnh0mb4l47167rqxc1d0pihm].[none:year:ok]</cols>
+      </table>
+      <simple-id uuid='{C55C4A8C-D8AF-49D9-9BA7-19C114DBF922}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Evolución de usuarios de internet'>
+      <cards>
+        <edge name='left'>
+          <strip size='124'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BAD17C00-7F31-4855-89EC-386706B7E942}' />
+    </window>
+    <window class='worksheet' name='Comparativo de indicadores'>
+      <cards>
+        <edge name='left'>
+          <strip size='124'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='1' param='[federated.181gnnh0mb4l47167rqxc1d0pihm].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EF6A7D9D-EF5A-480E-B673-5257A1AA14CC}' />
+    </window>
+    <window class='worksheet' name='crecimiento interanual'>
+      <cards>
+        <edge name='left'>
+          <strip size='124'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='2' param='[federated.181gnnh0mb4l47167rqxc1d0pihm].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2B64F22A-799D-4E7D-B760-CD50DB92595C}' />
+    </window>
+    <window class='worksheet' maximized='true' name='KPI - Internet'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5CFBD235-02D7-4793-8E63-0D247694EA98}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='55' name='KPI - Internet' width='166'>
+      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
+      NQr/C8Q5tKpN1UmGAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
