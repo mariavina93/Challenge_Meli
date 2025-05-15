@@ -8,7 +8,7 @@ Este proyecto tiene como objetivo explorar la **evolución del acceso a internet
 
 ## 📊 Herramienta de visualización utilizada
 
-El análisis fue desarrollado y publicado en **[Tableau Public](https://public.tableau.com/app/profile/maria.vi.a2611/viz/Dashboard-IndicadoresArgentina/TablerodeIndicadoresArgentinos?publish=yes)**:
+El análisis fue desarrollado y publicado en **Tableau Public**:
 
 🔗 **[Ver tablero interactivo en Tableau Public →](https://public.tableau.com/app/profile/maria.vi.a2611/viz/Dashboard-IndicadoresArgentina/TablerodeIndicadoresArgentinos?publish=yes)**
 
@@ -83,5 +83,7 @@ Challenge_Meli/
 
 ## ✍️ Autor
 
-Desarrollado por **María José Viña** como parte de un challenge de analítica y visualización para Mercado Libre utilizando datos del Banco Mundial.
+Desarrollado por **María José Viña** como parte de un challenge de analítica y visualización para Mercado Libre utilizando datos del Banco Mundial desde el siguiente link.
+
+🔗[API del World Bank](https://data.worldbank.org/) 
 
