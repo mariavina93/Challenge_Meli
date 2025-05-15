@@ -20,21 +20,21 @@ El análisis fue desarrollado y publicado en **Tableau Public**:
 Challenge_Meli/
 ├── .github/
 │   └── workflows/
-│       └── update_csv.yml                                      ← GitHub Action que actualiza el CSV automáticamente
+│       └── update_csv.yml                       ← GitHub Action que actualiza el CSV automáticamente
 ├── arquitectura/
-│   └── arquitectura.drawio                                     ← (arquitectura editable editable)
-│   └── arquitectura.png                                        ← (Imagen de arquitectura)
+│   └── arquitectura.drawio                      ← (arquitectura editable editable)
+│   └── arquitectura.png                         ← (Imagen de arquitectura)
 
 ├── dashboard/
-│   └── Dashboard - Indicadores Argentina.twb                   ← Tablero final
+│   └── Dashboard - Indicadores Argentina.twb    ← Tablero final
 ├── images/
-│   └── mercado-libre.png                                       ← logo png de mercado libre
-│   └── worldbank.png                                           ← logo png de worldbank
+│   └── mercado-libre.png                        ← logo png de mercado libre
+│   └── worldbank.png                            ← logo png de worldbank
 ├── data/
-│   └── indicadores_argentina.csv                               ← Dataset actualizado desde la API del World Bank
+│   └── indicadores_argentina.csv                ← Dataset actualizado desde la API del World Bank
 ├── scripts/
-│   └── update_data.py                                          ← Script Python que descarga y limpia los datos
-└── README.md                                                   ← Este archivo
+│   └── update_data.py                           ← Script Python que descarga y limpia los datos
+└── README.md                                    ← Este archivo
 ```
 
 ---
