@@ -21,13 +21,14 @@ for code, column_name in indicators.items():
     response = requests.get(url).json()
 
     if isinstance(response, list) and len(response) > 1:
-        entries = response[1]
-        rows = [
-            {"year": int(item["date"]), column_name: item["value"]}
-            for item in entries if item["value"] is not None
-        ]
-        df = pd.DataFrame(rows)
-        dataframes.append(df)
+       entries = response[1]
+       rows = []
+       for item in entries:
+           year = int(item["date"])
+           value = item["value"] if item["value"] is not None else 0
+           rows.append({"year": year, column_name: value})
+       df = pd.DataFrame(rows)
+       dataframes.append(df)
     else:
         print(f"Error al obtener datos de {code}")
 
