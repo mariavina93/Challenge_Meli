@@ -39,7 +39,7 @@ Challenge_Meli/
 
 ## 🧠 Arquitectura utilizada
 
-![Arquitectura referencial](https://github.com/mariavina93/Challenge_Meli/blob/main/arquitectura/arquitectua.png)
+![Arquitectura referencial](https://github.com/mariavina93/Challenge_Meli/blob/main/arquitectura/arquitectura.png)
 
 ---
 
