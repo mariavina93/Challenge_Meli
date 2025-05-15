@@ -47,7 +47,7 @@ Challenge_Meli/
 
 1. 📡 El script `update_data.py` se conecta a la [API del World Bank](https://data.worldbank.org/)
 2. 🔁 Cada semana, GitHub Actions actualiza automáticamente el archivo `indicadores_argentina.csv`
-3. 📄 El dataset se sincroniza con Google Sheets, fuente directa en Tableau
+3. 📄 El dataset se sincroniza con Google Sheets, fuente directa en Tableau -> [Google Sheets]([https://data.worldbank.org/](https://docs.google.com/spreadsheets/d/1-NrBl_xN3zb-0K65j1PRzJaoY4vGf7uFJmWdXyWddP0/edit?usp=sharing))
 4. 📊 Tableau Public consume estos datos y actualiza el dashboard
 
 ---
