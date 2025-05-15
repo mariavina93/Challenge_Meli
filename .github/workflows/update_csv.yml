@@ -1,0 +1,33 @@
+name: Actualizar CSV desde World Bank
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'  # cada lunes a las 08:00 UTC
+  workflow_dispatch:
+
+jobs:
+  actualizar-csv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Instalar dependencias
+        run: pip install pandas requests
+
+      - name: Ejecutar script de actualización
+        run: python scripts/update_data.py
+
+      - name: Commit y push del nuevo CSV
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data/indicadores_argentina.csv
+          git commit -m "Actualización automática del CSV"
+          git push
